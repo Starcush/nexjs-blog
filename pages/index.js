@@ -19,13 +19,13 @@ import utilStyles from '../styles/utils.module.css';
 
 // SSG
 export async function getStaticProps() {
-  // const allPostsData = getSortedPostsData();
-  const response = await fetch('http://localhost:3000/api/posts');
-  const jsonData = await response.json();
+  const allPostsData = getSortedPostsData();
+  // const response = await fetch('http://localhost:3000/api/posts');
+  // const jsonData = await response.json();
 
   return {
     props: {
-      allPostsData: jsonData.allPostsData,
+      allPostsData: allPostsData,
     },
   };
 }
